@@ -1,6 +1,14 @@
 # DNP Exercises 02 - Advanced C#
 
-## Exercise 1, Polymorphism
+## Exercise 1, Inheritance and Polymorphism
+a) Create a `Student` class that has a `Hi` method printing *“Hi, I’m a student”* to the console. The method should be overwritable. Create a `DNPStudent` class derived from the `Student` class. Have the `DNPStudent` overwrite the `Hi` method with it’s own implementation printing *“Hi, I’m a DNP student!”*.
+
+Consider: How do you call the `Hi` method of the `Student` class from the `DNPStudent` class? Try calling the parent method from `DNPStudent` so that both lines are printed to the console.
+
+b) If a child object is upcast into a parent object, and that child overrides a virtual method on the parent object, which version of the method will be called on the parent object? The child or the parent version? Test your assumption by writing code that tests this scenario. What if the child, instead of overriding, hid the method on the parent class? Does this change the behavior of calling the method on an upcast child object? 
+
+
+## Exercise 2, Polymorphism
 The following class diagram is part of a company’s administrative system.
 A part time employee is paid for each hour he/she is working and is hired for a number of hours per month. A full time employee is paid a fixed salary per month.
 
@@ -19,8 +27,8 @@ Implement the operation `employNewEmployee`. The operation shall add a new `Part
 Implement the necessary test in a main method.
 
 
-## Exercise 2, Interfaces
-Make a copy of your solution from Exercise 1 (implementation of the UML diagram above) and extend the implementation with the following exercise:
+## Exercise 3, Interfaces
+Make a copy of your solution to the exercise above (implementation of the UML diagram above) and extend the implementation with the following exercise:
 
 The objective of this exercise is to write an `IStudent` interface and a `PartTimeStudent` class that implements it. These may be used in a scenario where employees are allowed to register as part time students; as such one can be an employee and a student at the same time.
 
@@ -30,7 +38,7 @@ The objective of this exercise is to write an `IStudent` interface and a `PartTi
 Modify your program to allow `PartTimeStudent` classes to be used and tested.
 
 
-## Exercise 3, Collections
+## Exercise 4, Collections
 1. Implement an `Animal` class with the following specifications:
     - Animal type as a string
     - Weight as a double value
@@ -47,30 +55,26 @@ Modify your program to allow `PartTimeStudent` classes to be used and tested.
 1. Change your implementation to sort the animals based upon run speed and test it.
 
 
-## Exercise 4, Creating and Using Generic Stacks
-Using the generic `Stack` class (in `System.Collections.Generic`), create an empty stack of integers and an empty stack of strings. Create a static method that takes a generic `Stack` as an argument and a list of generic values (using the params keyword). The method should push all the generic values to the generic stack. Next, use this method to add some values to each stack and print them to the console.
+## Exercise 5, Namespaces
+Create a `Clown` class in it’s own `Funny` namespace. Create another class `Circus` (in a new file). Inside the `Circus` class, create three `Clown` objects. What happens? Is the `Circus` class able to find the `Clown` class? If not, fix it.
 
 
-## Exercise 5, Indexers
+## Exercise 6, Indexers
 Create a class `Schedule`. The class should use an indexer to store/access string values in a `Hashtable`. That is, the key should be a given `DateTime` object, and the corresponding value should be a `string` containing the classes of that given date.
 
 Create an instance of the `Schedule` class and test it with your own schedule.
 
 Expand the `Schedule` class with a second indexer that overloads the first one. This indexer should take a date `string` (instead of a `DateTime` object) and return the same results as the first indexer by parsing the string to a `DateTime` object.
 
+## Exercise 7, Dictionaries and Properties
+Create a `Person` object with some properties (`Name`, `Age`, `Power`). Create a `Dictionary` called *“nicknames”* of type `<string, Person>` which associates a `string` (nickname) with a `Person` object. Create some `Person` objects and store them in the dictionary with nickname keys. Test your dictionary by accessing the values in it based on the provided nickname.
 
-## Exercise 6, Params modifier
-Implement an `Add` method of a `Calculator` class that can take either an array of integers, or an arbitrary amount of integers as argument (hint: use the `params` modifier). Test your method by printing results to the console.
+## Exercise 8, Statics
+Create a class `Gun` with two static integer fields `gunCount` and `bulletCount` and an integer field `shotsFired`. In the constructor of the class, increment the `gunCount` with one so that this number will increase each time you create a `Gun` object. The `Gun` class should also have a public method `Shoot` that fires the gun by printing *“BANG!”* to the console and incrementing the `bulletCount` AND the `shotsFired` by one.
 
+Test your `Gun` class in the main method of your program. Create three new `Gun` objects and use the fire method on each of them a couple of times. After the guns have been fired, inspect the three fields of the `Gun` class by printing them to the console. What is the difference between `bulletCount` and `shotsFired`?
 
-## Exercise 7, Extension methods
-Create a `Time` class with two integer properties, `Hours` and `Minutes`. Create an extension method for the + operator that takes two `Time` objects and add them together, returning a new `Time` object. 
+## Exercise 9, Statics, helper class
+Create a `Helper` class that is static and provides you with some helpful helper methods. For example, the Helper class should have a method that adds two numbers together and logs the result to the console. Test your `Helper` class by using its methods from another class.
 
-Create another extension method that adds an integer value (in minutes) to a `Time` object and returns a new `Time` object.
-
-Override the `ToString` method so that printing a Time object to the console displays the time in the format *“Hours: X, Minutes: Y”*
-
-## Exercise 8, Delegates
-Create a notifier `delegate` that takes a `string` as an argument and returns `void`. Implement two methods, `SayHello` and `SayGoodBye` that prints *“Hello [name]”* and *“Goodbye [name]”*, respectively, to the console. 
-
-Use the notifier `delegate` to first print *“Hello [name]”* to the console when the application is run. Next, modify the code so that *“Goodbye [name]”* is printed instead. Lastly, modify and add to the code so that *“Hello [name]”* and *“Goodbye [name]”* are both printed to the console.
+Consider: Can you create instances of static classes? If not, how do you invoke methods and access properties?
