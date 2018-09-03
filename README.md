@@ -18,11 +18,11 @@ Implement the classes shown in the class diagram, including attributes and empty
 
 Implement constructors in the classes: `Employee`, `PartTimeEmployee` and `FullTimeEmployee`. The constructors shall take the necessary parameters to initialize all the attributes in the classes.
 
-Implement the necessary functionality in the `getMonthSalary` operations. The `getMonthSalary` must return the monthly salary for an employee.
+Implement the necessary functionality in the `GetMonthSalary` operations. The `GetMonthSalary` must return the monthly salary for an employee.
 
-Implement the operation `getMonthlySalaryTotal` in the class Company. The operation shall calculate the total salary which the company must pay each month. The calculation should be done by calling `getMonthSalary` on each of the employees and then returning the sum.
+Implement the operation `GetMonthlySalaryTotal` in the class Company. The operation shall calculate the total salary which the company must pay each month. The calculation should be done by calling `GetMonthSalary` on each of the employees and then returning the sum.
 
-Implement the operation `employNewEmployee`. The operation shall add a new `PartTimeEmployee` or `FullTimeEmployee` object to the company’s list of employees.
+Implement the operation `EmployNewEmployee`. The operation shall add a new `PartTimeEmployee` or `FullTimeEmployee` object to the company’s list of employees.
 
 Implement the necessary test in a main method.
 
