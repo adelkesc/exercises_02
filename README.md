@@ -1,4 +1,4 @@
-# DNP Exercises week 02 - C#
+# DNP Exercises week 02 - C# Programming
 
 ## Exercise 1, Inheritance and Polymorphism
 a) Create a `Student` class that has a `SayHi` method printing *“Hi, I am a student”* to the console. The method should be overwritable. Create a `DNPStudent` class derived from the `Student` class. Have the `DNPStudent` overwrite the `SayHi` method with its own implementation printing *“Hi, I am a DNP student!”*.
