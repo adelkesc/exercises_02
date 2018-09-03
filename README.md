@@ -1,11 +1,11 @@
 # DNP Exercises 02 - Advanced C#
 
 ## Exercise 1, Inheritance and Polymorphism
-a) Create a `Student` class that has a `Hi` method printing *“Hi, I’m a student”* to the console. The method should be overwritable. Create a `DNPStudent` class derived from the `Student` class. Have the `DNPStudent` overwrite the `Hi` method with it’s own implementation printing *“Hi, I’m a DNP student!”*.
+a) Create a `Student` class that has a `SayHi` method printing *“Hi, I am a student”* to the console. The method should be overwritable. Create a `DNPStudent` class derived from the `Student` class. Have the `DNPStudent` overwrite the `SayHi` method with its own implementation printing *“Hi, I am a DNP student!”*.
 
-Consider: How do you call the `Hi` method of the `Student` class from the `DNPStudent` class? Try calling the parent method from `DNPStudent` so that both lines are printed to the console.
+Consider: How do you call the `SayHi` method of the `Student` class from the `DNPStudent` class? Try calling the parent method from `DNPStudent` so that both lines are printed to the console.
 
-b) If a child object is upcast into a parent object, and that child overrides a virtual method on the parent object, which version of the method will be called on the parent object? The child or the parent version? Test your assumption by writing code that tests this scenario. What if the child, instead of overriding, hid the method on the parent class? Does this change the behavior of calling the method on an upcast child object? 
+b) If a child object is upcast into a parent object, and that child overrides a virtual method on the parent object, which version of the method will be called on the parent object? The child or the parent version? Test your assumption by writing code that tests this scenario. What if the child, instead of overriding, hid the method on the parent class? Does this change the behavior of calling the method on an upcast child object?
 
 
 ## Exercise 2, Polymorphism
@@ -18,11 +18,11 @@ Implement the classes shown in the class diagram, including attributes and empty
 
 Implement constructors in the classes: `Employee`, `PartTimeEmployee` and `FullTimeEmployee`. The constructors shall take the necessary parameters to initialize all the attributes in the classes.
 
-Implement the necessary functionality in the `getMonthSalary` operations. The `getMonthSalary` must return the monthly salary for an employee.
+Implement the necessary functionality in the `GetMonthlySalary` operations. The `GetMonthlySalary` must return the monthly salary for an employee.
 
-Implement the operation `getMonthlySalaryTotal` in the class Company. The operation shall calculate the total salary which the company must pay each month. The calculation should be done by calling `getMonthSalary` on each of the employees and then returning the sum.
+Implement the operation `GetMonthlySalaryTotal` in the class Company. The operation shall calculate the total salary which the company must pay each month. The calculation should be done by calling `GetMonthlySalary` on each of the employees and then returning the sum.
 
-Implement the operation `employNewEmployee`. The operation shall add a new `PartTimeEmployee` or `FullTimeEmployee` object to the company’s list of employees.
+Implement the operation `EmployNewEmployee`. The operation shall add a new `PartTimeEmployee` or `FullTimeEmployee` object to the company’s list of employees.
 
 Implement the necessary test in a main method.
 
@@ -54,10 +54,8 @@ Modify your program to allow `PartTimeStudent` classes to be used and tested.
 
 1. Change your implementation to sort the animals based upon run speed and test it.
 
-
 ## Exercise 5, Namespaces
 Create a `Clown` class in it’s own `Funny` namespace. Create another class `Circus` (in a new file). Inside the `Circus` class, create three `Clown` objects. What happens? Is the `Circus` class able to find the `Clown` class? If not, fix it.
-
 
 ## Exercise 6, Indexers
 Create a class `Schedule`. The class should use an indexer to store/access string values in a `Hashtable`. That is, the key should be a given `DateTime` object, and the corresponding value should be a `string` containing the classes of that given date.
