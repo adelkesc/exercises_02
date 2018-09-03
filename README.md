@@ -1,4 +1,4 @@
-# DNP Exercises 02 - Advanced C#
+# DNP Exercises week 02 - C#
 
 ## Exercise 1, Inheritance and Polymorphism
 a) Create a `Student` class that has a `SayHi` method printing *“Hi, I am a student”* to the console. The method should be overwritable. Create a `DNPStudent` class derived from the `Student` class. Have the `DNPStudent` overwrite the `SayHi` method with its own implementation printing *“Hi, I am a DNP student!”*.
@@ -6,7 +6,6 @@ a) Create a `Student` class that has a `SayHi` method printing *“Hi, I am a st
 Consider: How do you call the `SayHi` method of the `Student` class from the `DNPStudent` class? Try calling the parent method from `DNPStudent` so that both lines are printed to the console.
 
 b) If a child object is upcast into a parent object, and that child overrides a virtual method on the parent object, which version of the method will be called on the parent object? The child or the parent version? Test your assumption by writing code that tests this scenario. What if the child, instead of overriding, hid the method on the parent class? Does this change the behavior of calling the method on an upcast child object?
-
 
 ## Exercise 2, Polymorphism
 The following class diagram is part of a company’s administrative system.
@@ -25,7 +24,6 @@ Implement the operation `GetMonthlySalaryTotal` in the class Company. The operat
 Implement the operation `EmployNewEmployee`. The operation shall add a new `PartTimeEmployee` or `FullTimeEmployee` object to the company’s list of employees.
 
 Implement the necessary test in a main method.
-
 
 ## Exercise 3, Interfaces
 Make a copy of your solution to the exercise above (implementation of the UML diagram above) and extend the implementation with the following exercise:
